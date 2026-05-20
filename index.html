@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
 <meta charset="UTF-8">
@@ -9,155 +9,302 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-background:#f5f3ee;
-font-family:sans-serif;
-color:#222;
+    margin:0;
+    font-family:sans-serif;
+    background:#f5f5f5;
+    color:#222;
 }
 
-/* HERO */
+/* 主視覺 */
 
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
+.hero img{
+    width:100%;
+    display:block;
 }
 
-.hero video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.overlay{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-}
-
-.overlay h1{
-font-size:5vw;
-letter-spacing:5px;
-}
-
-.overlay p{
-margin-top:10px;
-font-size:1.2rem;
-}
-
-/* SECTION */
-
-.section{
-padding:80px 10%;
-}
+/* 標題 */
 
 .title{
-font-size:40px;
-margin-bottom:20px;
+    text-align:center;
+    padding:60px 20px;
+    background:white;
 }
 
-.text{
-font-size:18px;
-line-height:1.8;
-color:#555;
+.title h1{
+    font-size:48px;
+    margin-bottom:20px;
 }
 
-/* USER VOICE */
-
-.voice video{
-width:100%;
-border-radius:20px;
-margin-top:30px;
+.title p{
+    line-height:2;
+    color:#666;
+    font-size:18px;
 }
 
-.quote{
-margin-top:30px;
-font-size:24px;
-line-height:1.8;
-color:#444;
-font-style:italic;
+/* 影片 */
+
+.video-section{
+    padding:30px;
 }
 
-/* FOOTER */
+video{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* 卡片區 */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h2{
+    margin-top:0;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.card p{
+    line-height:1.9;
+    color:#666;
+}
+
+/* 訂購資訊 */
+
+.order{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.order h2{
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.order p{
+    line-height:2;
+    color:#ccc;
+    font-size:18px;
+}
+
+/* footer */
 
 .footer{
-padding:80px 10%;
-text-align:center;
-font-size:40px;
-font-weight:bold;
+    text-align:center;
+    padding:30px;
+    color:#777;
+    background:white;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- 主視覺 -->
 
 <section class="hero">
+<img src="main.png">
+</section>
 
-<video autoplay muted loop playsinline>
+<!-- 標題 -->
+
+<section class="title">
+
+<h1>GU × Spotify</h1>
+
+<p>
+穿上你正在聽的音樂。<br>
+不同曲風，變成不同穿搭風格。<br>
+從 K-pop、Hip Hop 到 Lo-fi，<br>
+每個人都能找到屬於自己的 Playlist Style。
+</p>
+
+</section>
+
+<!-- 影片 -->
+
+<section class="video-section">
+
+<video controls autoplay muted loop>
 <source src="影片.mp4" type="video/mp4">
 </video>
 
-<div class="overlay">
-<h1>GU × Spotify</h1>
-<p>Wear Your Sound</p>
+</section>
+
+<!-- 卡片 -->
+
+<section class="grid">
+
+<!-- KPOP -->
+
+<div class="card">
+
+<img src="kpop.png">
+
+<div class="card-content">
+
+<h2>K-POP</h2>
+
+<p>
+未來感銀色穿搭與霓虹紫光，搭配 Spotify 歌單氛圍，展現 K-pop 充滿舞台感與潮流感的風格。<br><br>
+
+透過 GU 的日常穿搭，讓每個人都能像偶像一樣，自由展現自己的音樂態度。
+</p>
+
+</div>
+</div>
+
+<!-- HIPHOP -->
+
+<div class="card">
+
+<img src="hippop.png">
+
+<div class="card-content">
+
+<h2>HIP HOP</h2>
+
+<p>
+街頭感黑色系穿搭、塗鴉字體與復古音響元素，呈現 Hip Hop 自由、不受拘束的個性。<br><br>
+
+GU 與 Spotify 將音樂文化融入日常穿搭，打造屬於自己的街頭節奏。
+</p>
+
+</div>
+</div>
+
+<!-- METAL -->
+
+<div class="card">
+
+<img src="metal.png">
+
+<div class="card-content">
+
+<h2>METAL</h2>
+
+<p>
+暗黑金屬風格結合皮革、鉚釘與重低音氛圍，展現 Metal 強烈且叛逆的能量。<br><br>
+
+透過 GU 的聯名設計，讓音樂不只是聆聽，更成為一種態度與自我表達。
+</p>
+
+</div>
+</div>
+
+<!-- INDIE -->
+
+<div class="card">
+
+<img src="indie.png">
+
+<div class="card-content">
+
+<h2>INDIE</h2>
+
+<p>
+柔和自然色調搭配底片感畫面，呈現 Indie 音樂安靜卻真實的情緒。<br><br>
+
+GU 與 Spotify 以輕鬆舒適的穿搭，陪伴每個人找到屬於自己的小眾品味。
+</p>
+
+</div>
+</div>
+
+<!-- CITY POP -->
+
+<div class="card">
+
+<img src="citypop.png">
+
+<div class="card-content">
+
+<h2>CITY POP</h2>
+
+<p>
+霓虹夜景、復古卡帶與 80 年代氛圍，重現 City Pop 獨有的浪漫與都市感。<br><br>
+
+GU 將復古潮流與音樂文化結合，打造充滿夏夜感的穿搭風格。
+</p>
+
+</div>
+</div>
+
+<!-- LOFI -->
+
+<div class="card">
+
+<img src="lofi.png">
+
+<div class="card-content">
+
+<h2>LO-FI</h2>
+
+<p>
+暖色燈光與居家感穿搭，營造 Lo-fi 放鬆、療癒的日常氛圍。<br><br>
+
+GU 與 Spotify 希望透過舒服的音樂與服裝，讓忙碌生活中也能找到片刻喘息。
+</p>
+
+</div>
 </div>
 
 </section>
 
-<!-- CONCEPT -->
+<!-- 訂購資訊 -->
 
-<section class="section">
+<section class="order">
 
-<h2 class="title">Concept</h2>
+<h2>訂購資訊</h2>
 
-<p class="text">
-GU × Spotify 將穿搭與音樂結合，
-讓每一件衣服都對應不同的音樂風格。
+<p>
+GU × Spotify 聯名系列現正開放預購。<br><br>
 
-透過掃描 QR code，
-人們可以找到與自己相同喜好的群體，
-也能更勇敢表達真正的自己。
+掃描商品 QR Code，<br>
+即可同步收聽對應曲風歌單。<br><br>
+
+每一種穿搭，都是一種音樂人格。<br>
+找到屬於你的 Playlist Style。
 </p>
 
 </section>
 
-<!-- USER VOICE -->
-
-<section class="section voice">
-
-<h2 class="title">USER VOICE</h2>
-
-<p class="text">
-使用者心聲：Sherry
-</p>
-
-<video controls>
-<source src="影片.mp4" type="video/mp4">
-</video>
-
-<p class="quote">
-「我第一次發現，
-原來真的有人跟我喜歡一樣的音樂。」
-</p>
-
-</section>
-
-<!-- FOOTER -->
+<!-- footer -->
 
 <section class="footer">
-WEAR YOUR SOUND
+
+GU × Spotify © 2026
+
 </section>
 
 </body>
