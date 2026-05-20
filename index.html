@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GU × Spotify</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f5f3ee;
+font-family:sans-serif;
+color:#222;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.hero video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+}
+
+.overlay h1{
+font-size:5vw;
+letter-spacing:5px;
+}
+
+.overlay p{
+margin-top:10px;
+font-size:1.2rem;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 10%;
+}
+
+.title{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.text{
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+/* USER VOICE */
+
+.voice video{
+width:100%;
+border-radius:20px;
+margin-top:30px;
+}
+
+.quote{
+margin-top:30px;
+font-size:24px;
+line-height:1.8;
+color:#444;
+font-style:italic;
+}
+
+/* FOOTER */
+
+.footer{
+padding:80px 10%;
+text-align:center;
+font-size:40px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+<source src="影片.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+<h1>GU × Spotify</h1>
+<p>Wear Your Sound</p>
+</div>
+
+</section>
+
+<!-- CONCEPT -->
+
+<section class="section">
+
+<h2 class="title">Concept</h2>
+
+<p class="text">
+GU × Spotify 將穿搭與音樂結合，
+讓每一件衣服都對應不同的音樂風格。
+
+透過掃描 QR code，
+人們可以找到與自己相同喜好的群體，
+也能更勇敢表達真正的自己。
+</p>
+
+</section>
+
+<!-- USER VOICE -->
+
+<section class="section voice">
+
+<h2 class="title">USER VOICE</h2>
+
+<p class="text">
+使用者心聲：Sherry
+</p>
+
+<video controls>
+<source src="影片.mp4" type="video/mp4">
+</video>
+
+<p class="quote">
+「我第一次發現，
+原來真的有人跟我喜歡一樣的音樂。」
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<section class="footer">
+WEAR YOUR SOUND
+</section>
+
+</body>
+</html>
