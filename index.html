@@ -1,201 +1,221 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GU × Spotify</title>
 
 <style>
 body{
-    margin:0;
-    font-family:sans-serif;
-    background:#f5f5f5;
-    color:#222;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f5f5;
+  color:#222;
 }
 
 .hero{
-    position:relative;
-    overflow:hidden;
+  position:relative;
+  overflow:hidden;
 }
 
 .hero img{
-    width:100%;
-    display:block;
+  width:100%;
+  display:block;
 }
 
 .hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.25);
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.28);
 }
 
 .hero-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:white;
-    z-index:2;
-    text-shadow:0 4px 25px rgba(0,0,0,0.7);
-    animation:fadeUp 1.5s ease;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:white;
+  text-align:center;
+  z-index:2;
+  text-shadow:0 5px 25px rgba(0,0,0,0.7);
+  animation:fadeUp 1.5s ease;
 }
 
 .hero-text h1{
-    font-size:64px;
-    letter-spacing:4px;
-    margin:0;
+  font-size:64px;
+  letter-spacing:4px;
+  margin:0;
 }
 
 .hero-text p{
-    font-size:22px;
-    letter-spacing:2px;
+  font-size:22px;
+  letter-spacing:2px;
 }
 
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translate(-50%,-40%);
-    }
-    to{
-        opacity:1;
-        transform:translate(-50%,-50%);
-    }
+  from{opacity:0; transform:translate(-50%,-40%);}
+  to{opacity:1; transform:translate(-50%,-50%);}
 }
 
 .title{
-    text-align:center;
-    padding:70px 20px;
-    background:white;
+  background:white;
+  text-align:center;
+  padding:70px 20px;
 }
 
 .title h1{
-    font-size:48px;
-    margin-bottom:20px;
+  font-size:48px;
 }
 
 .title p{
-    line-height:2;
-    color:#666;
-    font-size:18px;
+  line-height:2;
+  color:#666;
+  font-size:18px;
 }
 
 .video-section{
-    padding:30px;
+  padding:30px;
 }
 
 video{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.how-it-works{
+  background:white;
+  padding:90px 30px;
+  text-align:center;
+}
+
+.how-it-works h2{
+  font-size:46px;
+  margin-bottom:60px;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.step{
+  background:#f8f8f8;
+  border-radius:25px;
+  padding:40px 30px;
+  transition:0.4s;
+}
+
+.step:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.number{
+  font-size:60px;
+  font-weight:bold;
+  color:#1DB954;
+}
+
+.step p{
+  line-height:1.8;
+  color:#666;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  padding:40px;
 }
 
 .card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    transition:0.4s ease;
-    cursor:pointer;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.4s;
+  cursor:pointer;
 }
 
 .card:hover{
-    transform:translateY(-12px) scale(1.02);
-    box-shadow:0 18px 40px rgba(0,0,0,0.18);
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
 }
 
 .card img{
-    width:100%;
-    display:block;
-    transition:0.5s ease;
+  width:100%;
+  display:block;
+  transition:0.5s;
 }
 
 .card:hover img{
-    transform:scale(1.06);
+  transform:scale(1.06);
 }
 
 .card-content{
-    padding:25px;
+  padding:25px;
 }
 
 .card h2{
-    margin-top:0;
-    margin-bottom:15px;
-    font-size:30px;
-    letter-spacing:1px;
+  font-size:30px;
+  margin-top:0;
 }
 
 .card p{
-    line-height:1.9;
-    color:#666;
+  line-height:1.9;
+  color:#666;
 }
 
 .order{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:90px 20px;
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:90px 20px;
 }
 
 .order h2{
-    font-size:42px;
-    margin-bottom:30px;
+  font-size:42px;
 }
 
 .order p{
-    line-height:2;
-    color:#ccc;
-    font-size:18px;
+  line-height:2;
+  color:#ccc;
+  font-size:18px;
 }
 
 .order button{
-    margin-top:30px;
-    padding:16px 40px;
-    border-radius:999px;
-    border:1px solid white;
-    background:white;
-    color:#111;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
+  margin-top:30px;
+  padding:16px 40px;
+  border-radius:999px;
+  border:none;
+  background:white;
+  color:#111;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .order button:hover{
-    background:#1DB954;
-    color:white;
-    border-color:#1DB954;
-    transform:scale(1.08);
+  background:#1DB954;
+  color:white;
+  transform:scale(1.08);
 }
 
 .footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    background:white;
+  background:white;
+  text-align:center;
+  padding:30px;
+  color:#777;
 }
 
 @media(max-width:768px){
-    .hero-text h1{
-        font-size:36px;
-    }
-
-    .hero-text p{
-        font-size:16px;
-    }
-
-    .title h1{
-        font-size:36px;
-    }
+  .hero-text h1{font-size:36px;}
+  .hero-text p{font-size:16px;}
 }
 </style>
 </head>
@@ -203,139 +223,86 @@ video{
 <body>
 
 <section class="hero">
-<img src="main.png">
-
-<div class="hero-text">
-<h1>WEAR YOUR PLAYLIST.</h1>
-<p>GU × Spotify</p>
-</div>
+  <img src="main.png">
+  <div class="hero-text">
+    <h1>WEAR YOUR PLAYLIST.</h1>
+    <p>GU × Spotify</p>
+  </div>
 </section>
 
 <section class="title">
-<h1>GU × Spotify</h1>
-
-<p>
-穿上你正在聽的音樂。<br>
-不同曲風，變成不同穿搭風格。<br>
-從 K-pop、Hip Hop 到 Lo-fi，<br>
-每個人都能找到屬於自己的 Playlist Style。
-</p>
+  <h1>GU × Spotify</h1>
+  <p>
+    穿上你正在聽的音樂。<br>
+    不同曲風，變成不同穿搭風格。<br>
+    從 K-pop、Hip Hop 到 Punk，<br>
+    每個人都能找到屬於自己的 Playlist Style。
+  </p>
 </section>
 
 <section class="video-section">
-<video controls playsinline>
-<source src="影片.mp4" type="video/mp4">
-</video>
+  <video controls playsinline poster="cover.jpg">
+    <source src="影片.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section class="how-it-works">
+  <h2>HOW IT WORKS</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="number">01</div>
+      <h3>Choose Your Playlist</h3>
+      <p>選擇你喜歡的音樂曲風，找到屬於自己的 Playlist Style。</p>
+    </div>
+
+    <div class="step">
+      <div class="number">02</div>
+      <h3>Scan The QR Code</h3>
+      <p>掃描服裝上的 Spotify QR Code，即可同步收聽對應歌單。</p>
+    </div>
+
+    <div class="step">
+      <div class="number">03</div>
+      <h3>Wear Your Music</h3>
+      <p>讓音樂成為穿搭的一部分，用風格表達你的個性與態度。</p>
+    </div>
+  </div>
 </section>
 
 <section class="grid">
 
-<div class="card">
-<img src="kpop.png">
-<div class="card-content">
-<h2>K-POP</h2>
-<p>
-未來感銀色穿搭與霓虹紫光，搭配 Spotify 歌單氛圍，展現 K-pop 充滿舞台感與潮流感的風格。<br><br>
-透過 GU 的日常穿搭，讓每個人都能像偶像一樣，自由展現自己的音樂態度。
-</p>
-</div>
-</div>
+<div class="card"><img src="kpop.png"><div class="card-content"><h2>K-POP</h2><p>未來感銀色穿搭與霓虹紫光，搭配 Spotify 歌單氛圍，展現 K-pop 充滿舞台感與潮流感的風格。<br><br>透過 GU 的日常穿搭，讓每個人都能像偶像一樣，自由展現自己的音樂態度。</p></div></div>
 
-<div class="card">
-<img src="hippop.png">
-<div class="card-content">
-<h2>HIP HOP</h2>
-<p>
-街頭感黑色系穿搭、塗鴉字體與復古音響元素，呈現 Hip Hop 自由、不受拘束的個性。<br><br>
-GU 與 Spotify 將音樂文化融入日常穿搭，打造屬於自己的街頭節奏。
-</p>
-</div>
-</div>
+<div class="card"><img src="hippop.png"><div class="card-content"><h2>HIP HOP</h2><p>街頭感黑色系穿搭、塗鴉字體與復古音響元素，呈現 Hip Hop 自由、不受拘束的個性。<br><br>GU 與 Spotify 將音樂文化融入日常穿搭，打造屬於自己的街頭節奏。</p></div></div>
 
-<div class="card">
-<img src="metal.png">
-<div class="card-content">
-<h2>METAL</h2>
-<p>
-暗黑金屬風格結合皮革、鉚釘與重低音氛圍，展現 Metal 強烈且叛逆的能量。<br><br>
-透過 GU 的聯名設計，讓音樂不只是聆聽，更成為一種態度與自我表達。
-</p>
-</div>
-</div>
+<div class="card"><img src="metal.png"><div class="card-content"><h2>METAL</h2><p>暗黑金屬風格結合皮革、鉚釘與重低音氛圍，展現 Metal 強烈且叛逆的能量。<br><br>透過 GU 的聯名設計，讓音樂不只是聆聽，更成為一種態度與自我表達。</p></div></div>
 
-<div class="card">
-<img src="indie.png">
-<div class="card-content">
-<h2>INDIE</h2>
-<p>
-柔和自然色調搭配底片感畫面，呈現 Indie 音樂安靜卻真實的情緒。<br><br>
-GU 與 Spotify 以輕鬆舒適的穿搭，陪伴每個人找到屬於自己的小眾品味。
-</p>
-</div>
-</div>
+<div class="card"><img src="indie.png"><div class="card-content"><h2>INDIE</h2><p>柔和自然色調搭配底片感畫面，呈現 Indie 音樂安靜卻真實的情緒。<br><br>GU 與 Spotify 以輕鬆舒適的穿搭，陪伴每個人找到屬於自己的小眾品味。</p></div></div>
 
-<div class="card">
-<img src="citypop.png">
-<div class="card-content">
-<h2>CITY POP</h2>
-<p>
-霓虹夜景、復古卡帶與 80 年代氛圍，重現 City Pop 獨有的浪漫與都市感。<br><br>
-GU 將復古潮流與音樂文化結合，打造充滿夏夜感的穿搭風格。
-</p>
-</div>
-</div>
+<div class="card"><img src="citypop.png"><div class="card-content"><h2>CITY POP</h2><p>霓虹夜景、復古卡帶與 80 年代氛圍，重現 City Pop 獨有的浪漫與都市感。<br><br>GU 將復古潮流與音樂文化結合，打造充滿夏夜感的穿搭風格。</p></div></div>
 
-<div class="card">
-<img src="lofi.png">
-<div class="card-content">
-<h2>LO-FI</h2>
-<p>
-暖色燈光與居家感穿搭，營造 Lo-fi 放鬆、療癒的日常氛圍。<br><br>
-GU 與 Spotify 希望透過舒服的音樂與服裝，讓忙碌生活中也能找到片刻喘息。
-</p>
-</div>
-</div>
+<div class="card"><img src="lofi.png"><div class="card-content"><h2>LO-FI</h2><p>暖色燈光與居家感穿搭，營造 Lo-fi 放鬆、療癒的日常氛圍。<br><br>GU 與 Spotify 希望透過舒服的音樂與服裝，讓忙碌生活中也能找到片刻喘息。</p></div></div>
 
-<div class="card">
-<img src="jazz.png">
-<div class="card-content">
-<h2>JAZZ</h2>
-<p>
-溫暖燈光、黑膠唱片與復古紳士風格，呈現 Jazz 深夜般沈穩又迷人的氛圍。<br><br>
-GU 與 Spotify 將經典音樂文化融入日常穿搭，讓每個人都能找到屬於自己的夜晚節奏。
-</p>
-</div>
-</div>
+<div class="card"><img src="jazz.png"><div class="card-content"><h2>JAZZ</h2><p>溫暖燈光、黑膠唱片與復古紳士風格，呈現 Jazz 深夜般沈穩又迷人的氛圍。<br><br>GU 與 Spotify 將經典音樂文化融入日常穿搭，讓每個人都能找到屬於自己的夜晚節奏。</p></div></div>
 
-<div class="card">
-<img src="punk.png">
-<div class="card-content">
-<h2>PUNK</h2>
-<p>
-紅黑塗鴉、皮革鉚釘與叛逆標語，展現 Punk 不被拘束、勇於做自己的精神。<br><br>
-GU 與 Spotify 透過強烈街頭風格與音樂態度，打造屬於年輕世代的自由穿搭。
-</p>
-</div>
-</div>
+<div class="card"><img src="punk.png"><div class="card-content"><h2>PUNK</h2><p>紅黑塗鴉、皮革鉚釘與叛逆標語，展現 Punk 不被拘束、勇於做自己的精神。<br><br>GU 與 Spotify 透過強烈街頭風格與音樂態度，打造屬於年輕世代的自由穿搭。</p></div></div>
 
 </section>
 
 <section class="order">
-<h2>訂購資訊</h2>
-
-<p>
-GU × Spotify 聯名系列現正開放預購。<br><br>
-掃描商品 QR Code，<br>
-即可同步收聽對應曲風歌單。<br><br>
-每一種穿搭，都是一種音樂人格。<br>
-找到屬於你的 Playlist Style。
-</p>
-
-<button>PLACE ORDER</button>
+  <h2>訂購資訊</h2>
+  <p>
+    GU × Spotify 聯名系列現正開放預購。<br><br>
+    掃描商品 QR Code，即可同步收聽對應曲風歌單。<br><br>
+    每一種穿搭，都是一種音樂人格。<br>
+    找到屬於你的 Playlist Style。
+  </p>
+  <button>PLACE ORDER</button>
 </section>
 
 <section class="footer">
-GU × Spotify © 2026
+  GU × Spotify © 2026
 </section>
 
 </body>
